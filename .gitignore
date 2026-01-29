@@ -4,3 +4,5 @@ anaconda_projects/
 dataset/
 NEU-DET/
 datasets/
+original_datasets/
+datasets_split/
