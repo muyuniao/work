@@ -6,3 +6,10 @@ NEU-DET/
 datasets/
 original_datasets/
 datasets_split/
+*.zip
+*.docx
+*.pptx
+slice_test/
+restoretest/
+new/
+WuGang/

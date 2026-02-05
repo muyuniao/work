@@ -1,0 +1,269 @@
+nohup: ignoring input
+当前运行设备: cuda
+样本数量: 训练集 31250 | 验证集 7814
+
+Epoch 1/50
+--------------------
+/home/duomeitinrfx/.conda/envs/plate/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/duomeitinrfx/.conda/envs/plate/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+train_ordinal.py:63: FutureWarning: Call to deprecated class TriangularCrossEntropyLoss. (Use TriangularLoss instead with CrossEntropyLoss as base_loss. Will be removed in 3.0.0.) -- Deprecated since version 2.4.0.
+  criterion = TriangularCrossEntropyLoss(num_classes=NUM_CLASSES).to(DEVICE)
+train Loss: 0.5998 | Acc: 0.8612 | MAE: 0.2332
+val Loss: 0.8536 | Acc: 0.7809 | MAE: 0.4955
+ -> 发现更优模型 (MAE: 0.4955) 已保存
+
+Epoch 2/50
+--------------------
+train Loss: 0.3688 | Acc: 0.9806 | MAE: 0.0326
+val Loss: 0.5665 | Acc: 0.8787 | MAE: 0.1356
+ -> 发现更优模型 (MAE: 0.1356) 已保存
+
+Epoch 3/50
+--------------------
+train Loss: 0.3512 | Acc: 0.9879 | MAE: 0.0191
+val Loss: 0.5486 | Acc: 0.9030 | MAE: 0.1127
+ -> 发现更优模型 (MAE: 0.1127) 已保存
+
+Epoch 4/50
+--------------------
+train Loss: 0.3421 | Acc: 0.9919 | MAE: 0.0129
+val Loss: 0.3280 | Acc: 0.9959 | MAE: 0.0060
+ -> 发现更优模型 (MAE: 0.0060) 已保存
+
+Epoch 5/50
+--------------------
+train Loss: 0.3191 | Acc: 0.9997 | MAE: 0.0003
+val Loss: 0.3183 | Acc: 0.9992 | MAE: 0.0008
+ -> 发现更优模型 (MAE: 0.0008) 已保存
+
+Epoch 6/50
+--------------------
+train Loss: 0.3170 | Acc: 0.9999 | MAE: 0.0001
+val Loss: 0.3277 | Acc: 0.9949 | MAE: 0.0059
+
+Epoch 7/50
+--------------------
+train Loss: 0.3464 | Acc: 0.9892 | MAE: 0.0166
+val Loss: 1.2732 | Acc: 0.6688 | MAE: 0.6765
+
+Epoch 8/50
+--------------------
+train Loss: 0.3197 | Acc: 0.9993 | MAE: 0.0012
+val Loss: 0.3184 | Acc: 0.9992 | MAE: 0.0012
+
+Epoch 9/50
+--------------------
+train Loss: 0.3169 | Acc: 1.0000 | MAE: 0.0001
+val Loss: 0.3175 | Acc: 0.9992 | MAE: 0.0012
+
+Epoch 10/50
+--------------------
+train Loss: 0.3164 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3170 | Acc: 0.9994 | MAE: 0.0013
+
+Epoch 11/50
+--------------------
+train Loss: 0.3161 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3167 | Acc: 0.9996 | MAE: 0.0008
+ -> 发现更优模型 (MAE: 0.0008) 已保存
+
+Epoch 12/50
+--------------------
+train Loss: 0.3163 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3165 | Acc: 0.9997 | MAE: 0.0004
+ -> 发现更优模型 (MAE: 0.0004) 已保存
+
+Epoch 13/50
+--------------------
+train Loss: 0.3156 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3162 | Acc: 0.9996 | MAE: 0.0004
+
+Epoch 14/50
+--------------------
+train Loss: 0.3155 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3161 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 15/50
+--------------------
+train Loss: 0.3153 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3161 | Acc: 0.9996 | MAE: 0.0006
+
+Epoch 16/50
+--------------------
+train Loss: 0.3153 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3161 | Acc: 0.9996 | MAE: 0.0006
+
+Epoch 17/50
+--------------------
+train Loss: 0.3153 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3160 | Acc: 0.9996 | MAE: 0.0006
+
+Epoch 18/50
+--------------------
+train Loss: 0.3153 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3160 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 19/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3161 | Acc: 0.9996 | MAE: 0.0006
+
+Epoch 20/50
+--------------------
+train Loss: 0.3153 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3160 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 21/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3160 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 22/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3161 | Acc: 0.9995 | MAE: 0.0010
+
+Epoch 23/50
+--------------------
+train Loss: 0.3153 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3159 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 24/50
+--------------------
+train Loss: 0.3151 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3160 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 25/50
+--------------------
+train Loss: 0.3151 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3161 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 26/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3159 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 27/50
+--------------------
+train Loss: 0.3153 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3159 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 28/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3160 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 29/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3159 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 30/50
+--------------------
+train Loss: 0.3153 | Acc: 1.0000 | MAE: 0.0001
+val Loss: 0.3160 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 31/50
+--------------------
+train Loss: 0.3153 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3160 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 32/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3160 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 33/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3159 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 34/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3162 | Acc: 0.9999 | MAE: 0.0002
+ -> 发现更优模型 (MAE: 0.0002) 已保存
+
+Epoch 35/50
+--------------------
+train Loss: 0.3151 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3159 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 36/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3159 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 37/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3161 | Acc: 0.9996 | MAE: 0.0006
+
+Epoch 38/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3160 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 39/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3159 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 40/50
+--------------------
+train Loss: 0.3153 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3160 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 41/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3160 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 42/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3158 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 43/50
+--------------------
+train Loss: 0.3153 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3162 | Acc: 0.9995 | MAE: 0.0010
+
+Epoch 44/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0001
+val Loss: 0.3160 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 45/50
+--------------------
+train Loss: 0.3151 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3159 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 46/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3159 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 47/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3159 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 48/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3159 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 49/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3159 | Acc: 0.9997 | MAE: 0.0004
+
+Epoch 50/50
+--------------------
+train Loss: 0.3152 | Acc: 1.0000 | MAE: 0.0000
+val Loss: 0.3161 | Acc: 0.9996 | MAE: 0.0008
+
+训练全部完成! 验证集最佳 MAE: 0.0002
