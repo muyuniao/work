@@ -13,3 +13,7 @@ slice_test/
 restoretest/
 new/
 WuGang/
+*.xml
+*.iml
+remote/
+.idea/
