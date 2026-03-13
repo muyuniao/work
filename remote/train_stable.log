@@ -1,0 +1,101 @@
+nohup: ignoring input
+当前运行设备: cuda
+样本数量: 训练集 31153 | 验证集 7911
+
+Epoch 1/50
+--------------------
+/home/duomeitinrfx/.conda/envs/plate/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/duomeitinrfx/.conda/envs/plate/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+train Loss: 0.4988 | Acc: 0.7961
+val Loss: 1.5983 | Acc: 0.6103
+ -> 发现更优模型 (Acc: 0.6103) 已保存
+耗时: 188s
+
+Epoch 2/50
+--------------------
+train Loss: 0.2394 | Acc: 0.9079
+val Loss: 2.4087 | Acc: 0.5783
+ -> 验证集未提升 (1/10)
+耗时: 44s
+
+Epoch 3/50
+--------------------
+train Loss: 0.1606 | Acc: 0.9415
+val Loss: 2.0062 | Acc: 0.6524
+ -> 发现更优模型 (Acc: 0.6524) 已保存
+耗时: 45s
+
+Epoch 4/50
+--------------------
+train Loss: 0.1129 | Acc: 0.9587
+val Loss: 1.9631 | Acc: 0.5782
+ -> 验证集未提升 (1/10)
+耗时: 46s
+
+Epoch 5/50
+--------------------
+train Loss: 0.0969 | Acc: 0.9656
+val Loss: 2.3219 | Acc: 0.5033
+ -> 验证集未提升 (2/10)
+耗时: 46s
+
+Epoch 6/50
+--------------------
+train Loss: 0.0770 | Acc: 0.9733
+val Loss: 2.4680 | Acc: 0.5906
+ -> 验证集未提升 (3/10)
+耗时: 43s
+
+Epoch 7/50
+--------------------
+train Loss: 0.0757 | Acc: 0.9727
+val Loss: 2.2723 | Acc: 0.5392
+ -> 验证集未提升 (4/10)
+耗时: 43s
+
+Epoch 8/50
+--------------------
+train Loss: 0.0285 | Acc: 0.9913
+val Loss: 2.3184 | Acc: 0.5863
+ -> 验证集未提升 (5/10)
+耗时: 43s
+
+Epoch 9/50
+--------------------
+train Loss: 0.0151 | Acc: 0.9960
+val Loss: 2.3584 | Acc: 0.5864
+ -> 验证集未提升 (6/10)
+耗时: 42s
+
+Epoch 10/50
+--------------------
+train Loss: 0.0117 | Acc: 0.9966
+val Loss: 2.3946 | Acc: 0.5860
+ -> 验证集未提升 (7/10)
+耗时: 44s
+
+Epoch 11/50
+--------------------
+train Loss: 0.0088 | Acc: 0.9978
+val Loss: 2.5030 | Acc: 0.5899
+ -> 验证集未提升 (8/10)
+耗时: 44s
+
+Epoch 12/50
+--------------------
+train Loss: 0.0068 | Acc: 0.9985
+val Loss: 2.5498 | Acc: 0.5803
+ -> 验证集未提升 (9/10)
+耗时: 43s
+
+Epoch 13/50
+--------------------
+train Loss: 0.0070 | Acc: 0.9980
+val Loss: 2.5686 | Acc: 0.5870
+ -> 验证集未提升 (10/10)
+
+早停触发! 在连续 10 个 Epoch 内验证集准确率未提升。
+
+训练全部完成! 验证集最佳 Acc: 0.6524

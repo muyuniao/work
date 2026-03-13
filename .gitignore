@@ -3,6 +3,7 @@ anaconda_projects/
 anaconda_projects/
 dataset/
 NEU-DET/
+dataset/
 datasets/
 original_datasets/
 datasets_split/
@@ -15,5 +16,5 @@ new/
 WuGang/
 *.xml
 *.iml
-remote/
 .idea/
+WuGang_new/
