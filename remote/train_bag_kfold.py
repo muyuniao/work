@@ -8,8 +8,8 @@ from sklearn.model_selection import StratifiedKFold
 from MIL import AttentionMIL  # 导入你的模型
 
 # ================= 配置区 =================
-FEATURE_DIR = '/home/duomeitinrfx/users/yunhe/dataset_features'  # 你的 .pt 特征文件夹路径
-NUM_EPOCHS = 30  # 因为数据集变小（划分了），收敛会更快，可以适当调小
+FEATURE_DIR = '/home/duomeitinrfx/users/yunhe/dataset_features'  # .pt 特征文件夹路径
+NUM_EPOCHS = 30  # 因为数据集变小，收敛会更快，可以适当调小
 K_FOLDS = 5  # 5 折交叉验证
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -72,8 +72,8 @@ def main():
         train_loader = DataLoader(BagDataset(train_files, train_labels), batch_size=1, shuffle=True)
         val_loader = DataLoader(BagDataset(val_files, val_labels), batch_size=1, shuffle=False)
 
-        # ⚠️ 极度关键：每一折都必须重新初始化一个全新的模型！
-        # 绝不能用上一折训练好的模型接着练，否则会造成数据穿越（Data Leakage）
+        # 每一折都必须重新初始化一个全新的模型！
+        # 绝不能用上一折训练好的模型接着练，否则会造成数据穿越
         model = AttentionMIL(feature_dim=512, num_classes=4).to(DEVICE)
         criterion = nn.CrossEntropyLoss()
         optimizer = optim.Adam(model.parameters(), lr=1e-4, weight_decay=1e-3)
@@ -117,10 +117,10 @@ def main():
             # 记录本折的最好成绩
             if val_acc > best_val_acc:
                 best_val_acc = val_acc
-                # 可选：你可以把每一折的最佳模型存下来
+                # 可选：可以把每一折的最佳模型存下来
                 # torch.save(model.state_dict(), f'best_model_fold{fold+1}.pth')
 
-            # 每 10 个 Epoch 打印一次，保持控制台清爽
+            # 每 10 个 Epoch 打印一次，
             if (epoch + 1) % 10 == 0 or epoch == 0:
                 print(f"  Epoch {epoch + 1:2d} | Train Acc: {train_acc:.4f} | Val Acc: {val_acc:.4f}")
 

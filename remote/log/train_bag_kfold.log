@@ -1,0 +1,49 @@
+nohup: ignoring input
+train_bag_kfold.py:29: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  feature = torch.load(self.files[idx]).to(DEVICE)
+当前运行设备: cuda
+总计加载了 271 张钢板的特征矩阵。
+准备进行 5 折分层交叉验证...
+
+=============== 开始第 1/5 折训练 ===============
+  Epoch  1 | Train Acc: 0.4120 | Val Acc: 0.5455
+  Epoch 10 | Train Acc: 0.6296 | Val Acc: 0.6909
+  Epoch 20 | Train Acc: 0.7963 | Val Acc: 0.7273
+  Epoch 30 | Train Acc: 0.8333 | Val Acc: 0.7273
+--> 第 1 折验证集最高准确率: 0.7636
+
+=============== 开始第 2/5 折训练 ===============
+  Epoch  1 | Train Acc: 0.3594 | Val Acc: 0.5556
+  Epoch 10 | Train Acc: 0.6544 | Val Acc: 0.6667
+  Epoch 20 | Train Acc: 0.7465 | Val Acc: 0.7222
+  Epoch 30 | Train Acc: 0.8111 | Val Acc: 0.7593
+--> 第 2 折验证集最高准确率: 0.7593
+
+=============== 开始第 3/5 折训练 ===============
+  Epoch  1 | Train Acc: 0.4332 | Val Acc: 0.5556
+  Epoch 10 | Train Acc: 0.6912 | Val Acc: 0.6296
+  Epoch 20 | Train Acc: 0.7558 | Val Acc: 0.6852
+  Epoch 30 | Train Acc: 0.8433 | Val Acc: 0.7593
+--> 第 3 折验证集最高准确率: 0.7593
+
+=============== 开始第 4/5 折训练 ===============
+  Epoch  1 | Train Acc: 0.4562 | Val Acc: 0.5556
+  Epoch 10 | Train Acc: 0.6406 | Val Acc: 0.6481
+  Epoch 20 | Train Acc: 0.7465 | Val Acc: 0.6481
+  Epoch 30 | Train Acc: 0.8018 | Val Acc: 0.6667
+--> 第 4 折验证集最高准确率: 0.7222
+
+=============== 开始第 5/5 折训练 ===============
+  Epoch  1 | Train Acc: 0.4562 | Val Acc: 0.5556
+  Epoch 10 | Train Acc: 0.6636 | Val Acc: 0.6667
+  Epoch 20 | Train Acc: 0.7373 | Val Acc: 0.7407
+  Epoch 30 | Train Acc: 0.7696 | Val Acc: 0.7222
+--> 第 5 折验证集最高准确率: 0.7778
+
+=============== 最终评估报告 ===============
+Fold 1: 0.7636
+Fold 2: 0.7593
+Fold 3: 0.7593
+Fold 4: 0.7222
+Fold 5: 0.7778
+平均验证准确率 (Mean ± Std): 0.7564 ± 0.0184

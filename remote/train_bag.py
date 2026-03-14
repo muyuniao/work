@@ -3,10 +3,10 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
-from MIL import AttentionMIL  # 导入我们刚刚写的网络模型
+from MIL import AttentionMIL
 
 # ================= 配置区 =================
-FEATURE_DIR = '/home/duomeitinrfx/users/yunhe/dataset_features'  # 填你服务器上 .pt 文件的路径
+FEATURE_DIR = '/home/duomeitinrfx/users/yunhe/dataset_features'
 NUM_EPOCHS = 50
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -26,7 +26,7 @@ class BagDataset(Dataset):
             for f in os.listdir(cls_dir):
                 if f.endswith('.pt'):
                     self.files.append(os.path.join(cls_dir, f))
-                    # 注意：PyTorch 里的标签索引是从 0 开始的 (0,1,2,3 对应 1,2,3,4级)
+
                     self.labels.append(i)
 
     def __len__(self):
@@ -43,7 +43,7 @@ def main():
     print(f"当前运行设备: {DEVICE}")
     dataset = BagDataset(FEATURE_DIR)
 
-    # ⚠️ 极度关键：Batch Size 必须为 1！
+    # Batch Size 必须为 1！
     # 因为每块钢板切出来的张数 (N) 不一样，无法拼接成规则的 Batch 矩阵。
     dataloader = DataLoader(dataset, batch_size=1, shuffle=True)
     print(f"总计加载了 {len(dataset)} 张钢板的特征矩阵。")
@@ -51,7 +51,7 @@ def main():
     # 2. 初始化网络、损失函数和优化器
     model = AttentionMIL(feature_dim=512, num_classes=4).to(DEVICE)
 
-    # 这里你可以随时替换成 dlordinal 的 TriangularCrossEntropyLoss
+    # 这里可以随时替换成 dlordinal 的 TriangularCrossEntropyLoss
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=1e-4, weight_decay=1e-3)
 
